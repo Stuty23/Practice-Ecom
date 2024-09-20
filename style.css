@@ -40,28 +40,80 @@ nav ul li a:hover {
 }
 
 .banner {
-    background-color: #e3e3e3;
+    background: linear-gradient(135deg, #00f260, #0575e6);
+    color: #fff;
     text-align: center;
     padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 .banner h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.banner p {
+    font-size: 1.3em;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0.1;
+    }
 }
 
 .banner button {
-    background-color: #ff4b2b;
+    background: linear-gradient(45deg,  rgb(6, 241, 155), rgb(0, 149, 255));
     color: #fff;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
-    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 30px;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 .banner button:hover {
-    background-color: #e03a1b;
+    background: linear-gradient(210deg, rgb(6, 241, 155), rgb(0, 149, 255));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
 }
 
 .products {
@@ -121,7 +173,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #00f260, #0575e6);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -163,7 +215,7 @@ footer {
 .product-info ul li strong {
     font-weight: bold;
     margin-right: 5px;
-    color: #e03a1b;
+    color:  #0964ba;
 }
 .video {
     padding: 2px;
