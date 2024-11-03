@@ -72,6 +72,21 @@
             background-color: #218838;
         }
     </style>
+    <script>
+        function addToCart(product) {
+            // Get cart from local storage or initialize an empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the selected product to the cart
+            cart.push(product);
+
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Optional: Alert user or update UI
+            alert(product.name + ' has been added to your cart!');
+        }
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -83,7 +98,7 @@
         <h1 class="product-title">Product 4</h1>
         <p class="product-description">This is a great product that you will love!</p>
         <p class="product-price">$29.99</p>
-        <button class="pay-now-button">Pay Now</button>
+        <a href="cart.html"><button class="pay-now-button" onclick="addToCart({ id: 4, name: 'Product 4', price: 29.99 })">Add to Cart</button></a>
         <button class="home-button" onclick="window.location.href='https://stuty23.github.io/Practice-Ecom/'">Home</button>
         <style>
             .home-button {
